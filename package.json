@@ -1,0 +1,28 @@
+{
+  "name": "hyperzsh",
+  "version": "1.0.0",
+  "description": "A zsh prompt tailored for HyperTerm",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerreckart/hyperzsh.git"
+  },
+  "keywords": [
+    "zsh",
+    "theme",
+    "hyperterm"
+  ],
+  "author": "Tyler Reckart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylerreckart/hyperzsh/issues"
+  },
+  "homepage": "https://github.com/tylerreckart/hyperzsh#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-lintspaces": "^0.4.1"
+  }
+}
