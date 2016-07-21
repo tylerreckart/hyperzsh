@@ -2,7 +2,7 @@
 
 ![Hyperzsh](screenshot.gif)
 
-Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussel/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
+Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
 
 If currently shows:  
 - Git status
