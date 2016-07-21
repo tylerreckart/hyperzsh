@@ -17,7 +17,7 @@ If currently shows:
 Add `antigen bundle tylerreckart/hyperzsh` to your `.zshrc`. Antigen will clone and load the hyperzsh repository automaticall the next time you start a zsh session.  
 
 ### For [oh-my-zsh](http://ohmyz.sh) users  
-If you're using oh-my-zsh, follow these steps to install hyperzsh:
+If you're using oh-my-zsh, follow these steps to install hyperzsh:  
 `git clone https://github.com/tylerreckart/hyperzsh`  
 `cd hyperzsh && cp -R hyperzsh.zsh-theme ~/.oh-my-zsh/themes/hyperzsh.zsh-theme`  
 `vim ~/.zshrc`
