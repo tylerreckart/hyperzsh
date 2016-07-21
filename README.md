@@ -1,4 +1,5 @@
-# H Y P E R Z S H [![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)  
+## H Y P E R Z S H  
+[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)  
 
 ![Hyperzsh](screenshot.gif)
 
