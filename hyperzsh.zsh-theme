@@ -1,8 +1,5 @@
-# The prompt #
-PROMPT='$(_user_host)%{$fg[cyan]%}%c %{$reset_color%}$(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(_git_time_since_commit)${_return_status}➜ '
-
-# The right-hand prompt
-local _git_prompt='$(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(_git_time_since_commit) ${_return_status}'
+# The prompt
+PROMPT='$(_user_host)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
 
 local _return_status="%{$fg[red]%}%(?..⍉)%{$reset_color%}"
 
@@ -18,10 +15,10 @@ function _user_host() {
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}◒ "
-ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_CLEAN=" "
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%}✓ "
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}△ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
