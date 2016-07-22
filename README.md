@@ -1,8 +1,9 @@
-# H Y P E R Z S H [![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)  
+## H Y P E R Z S H  
+[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)  
 
 ![Hyperzsh](screenshot.gif)
 
-Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussel/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
+Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
 
 If currently shows:  
 - Git status
@@ -16,7 +17,7 @@ If currently shows:
 Add `antigen bundle tylerreckart/hyperzsh` to your `.zshrc`. Antigen will clone and load the hyperzsh repository automaticall the next time you start a zsh session.  
 
 ### For [oh-my-zsh](http://ohmyz.sh) users  
-If you're using oh-my-zsh, follow these steps to install hyperzsh:
+If you're using oh-my-zsh, follow these steps to install hyperzsh:  
 `git clone https://github.com/tylerreckart/hyperzsh`  
 `cd hyperzsh && cp -R hyperzsh.zsh-theme ~/.oh-my-zsh/themes/hyperzsh.zsh-theme`  
 `vim ~/.zshrc`
