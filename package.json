@@ -1,7 +1,7 @@
 {
   "name": "hyperzsh",
   "version": "1.0.0",
-  "description": "A zsh prompt tailored for HyperTerm",
+  "description": "Zsh for HyperTerm",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
