@@ -21,7 +21,7 @@ If you're using oh-my-zsh, follow these steps to install hyperzsh:
 `git clone https://github.com/tylerreckart/hyperzsh`  
 `cd hyperzsh && cp -R hyperzsh.zsh-theme ~/.oh-my-zsh/themes/hyperzsh.zsh-theme`  
 `vim ~/.zshrc`
-Set `ZSH_THEME="current_theme"` to `ZSH_theme="hyperzsh"`  
+Set `ZSH_THEME="current_theme"` to `ZSH_THEME="hyperzsh"`  
 
 ### For [Zgen](https://github.com/tarjoilija/zgen) users
 Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen load` statements.  
