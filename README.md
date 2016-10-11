@@ -28,7 +28,7 @@ Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen loa
 `zgen save` and zgen will automaticall handle cloning the repository for you.  
 
 ## Color schemes  
-Hyperzsh was built with HyperTerm in mind. The demo above uses my custom color scheme called [hyperblue](https://github.com/tylerreckart/hyperblue). You can automatically configure hyperblue by adding `'hyperblue'` to the plugins section in `~/.hyperterm.js`.  
+Hyperzsh was built with Hyper.app in mind. The demo above uses my custom color scheme called [hyperblue](https://github.com/tylerreckart/hyperblue). You can automatically configure hyperblue by adding `'hyperblue'` to the plugins section in `~/.hyperterm.js`.  
 
 ## Options  
 Odin is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you will. Want to slap some emoji in there? Go for it!
