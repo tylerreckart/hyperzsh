@@ -1,5 +1,5 @@
 # The prompt
-PROMPT='$(_user_host)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
+PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
 
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
@@ -11,6 +11,13 @@ function _user_host() {
   fi
   if [[ -n $me ]]; then
     echo "%{$fg[cyan]%}$me%{$reset_color%}:"
+  fi
+}
+
+# Determine if there is an active Python virtual environment
+function _python_venv() {
+  if [[ $VIRTUAL_ENV != "" ]]; then
+    echo "%{$fg[blue]%}(${VIRTUAL_ENV##*/})%{$reset_color%} "
   fi
 }
 
