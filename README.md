@@ -1,5 +1,5 @@
 ## H Y P E R Z S H  
-[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://github.com/tylerreckart/hyperzsh)  
+[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://github.com/tylerreckart/hyperzsh) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/hyperzsh)  
 
 ![Hyperzsh](screenshot.gif)
 
