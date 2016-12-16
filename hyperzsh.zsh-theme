@@ -33,7 +33,7 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}➜ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[cyan]%}§ "
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%}▲ "
 
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[white]%}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[white]%}"
@@ -65,8 +65,19 @@ function _git_time_since_commit() {
     else
       commit_age="${minutes}m "
     fi
+    if [[ -n $(git status -s 2> /dev/null) ]]; then
+        if [ "$hours" -gt 4 ]; then
+            COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"
+        elif [ "$minutes" -gt 30 ]; then
+            COLOR="$ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM"
+        else
+            COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT"
+        fi
+    else
+        COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
+    fi
 
-    color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL
-    echo "$color$commit_age%{$reset_color%}"
+
+    echo "$COLOR$commit_age%{$reset_color%}"
   fi
 }
