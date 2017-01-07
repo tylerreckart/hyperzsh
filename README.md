@@ -1,5 +1,5 @@
-## H Y P E R Z S H  
-[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://github.com/tylerreckart/hyperzsh) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/hyperzsh)  
+#### H Y P E R Z S H  
+[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)
 
 ![Hyperzsh](screenshot.gif)
 
@@ -28,7 +28,7 @@ Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen loa
 `zgen save` and zgen will automaticall handle cloning the repository for you.  
 
 ## Color schemes  
-Hyperzsh was built with Hyper.app in mind. The demo above uses my custom color scheme called [hyperblue](https://github.com/tylerreckart/hyperblue). You can automatically configure hyperblue by adding `'hyperblue'` to the plugins section in `~/.hyperterm.js`.  
+Hyperzsh was built with Hyper.app in mind. The demo above uses my custom color scheme called [hyperblue](https://github.com/tylerreckart/hyperblue). More recently, I've built [hyperblue-vibrancy](https://github.com/tylerreckart/hyperblue-vibrancy). It brings in the same colorscheme as hyperblue, but leverages the Vibrancy API in macos. the You can automatically configure hyperblue by adding `'hyperblue'` or `'hyperblue-vibrancy'` to the plugins section in `~/.hyper.js`.  
 
 ## Options  
 Odin is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you will. Want to slap some emoji in there? Go for it!
