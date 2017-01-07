@@ -1,7 +1,7 @@
 #### H Y P E R Z S H  
 [![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)
 
-![Hyperzsh](screenshot.gif)
+![Hyperzsh](screenshots/demo.gif)
 
 Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
 
@@ -9,6 +9,7 @@ If currently shows:
 - Git status
 - Timestamp
 - Current directory
+- [Current SHA](#current_sha)
 - Background jobs
 - Exit code of last command
 
@@ -31,7 +32,21 @@ Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen loa
 Hyperzsh was built with Hyper.app in mind. The demo above uses my custom color scheme called [hyperblue](https://github.com/tylerreckart/hyperblue). More recently, I've built [hyperblue-vibrancy](https://github.com/tylerreckart/hyperblue-vibrancy). It brings in the same colorscheme as hyperblue, but leverages the Vibrancy API in macos. the You can automatically configure hyperblue by adding `'hyperblue'` or `'hyperblue-vibrancy'` to the plugins section in `~/.hyper.js`.  
 
 ## Options  
-Odin is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you will. Want to slap some emoji in there? Go for it!
+Hyperzsh is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you will. Want to slap some emoji in there? Go for it!
+
+### Show current SHA <a name="current_sha"></a>  
+
+![SHA Prompt](screenshots/sha_prompt.png)  
+
+If you'd like to view your branch's current SHA, there's already support baked into the theme. All you have to do is edit `hyperzsh.zsh-theme` and comment out the default prompt while uncommenting the prompt that includes the SHA.  
+
+```zsh
+# The prompt
+# PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(git_prompt_short_sha)%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
+
+# Prompt with SHA
+PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(git_prompt_short_sha)%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
+```
 
 ### Status Indicators  
 | Variable | Indicator | Meaning |
@@ -56,4 +71,4 @@ The right hand prompt displays the current branch, time since last commit, as we
 | `ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL` | White |
 
 ## License
-MIT (c) 2016 [Tyler Reckart](https://github.com/tylerreckart)
+MIT (c) 2016 - 2017 [Tyler Reckart](https://github.com/tylerreckart)
