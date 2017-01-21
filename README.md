@@ -1,5 +1,5 @@
 #### H Y P E R Z S H  
-[![Build Status](https://travis-ci.org/tylerreckart/hyperzsh.svg?branch=master)](https://travis-ci.org/tylerreckart/hyperzsh)
+[![Hyperzsh](https://circleci.com/gh/tylerreckart/hyperzsh.svg?style=svg)](https://circleci.com/gh/tylerreckart/hyperzsh)
 
 ![Hyperzsh](screenshots/demo.gif)
 
