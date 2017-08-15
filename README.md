@@ -19,9 +19,9 @@ Add `antigen bundle tylerreckart/hyperzsh` to your `.zshrc`. Antigen will clone 
 
 ### For [oh-my-zsh](http://ohmyz.sh) users  
 If you're using oh-my-zsh, follow these steps to install hyperzsh:  
-`git clone https://github.com/tylerreckart/hyperzsh`  
-`cd hyperzsh && cp -R hyperzsh.zsh-theme ~/.oh-my-zsh/themes/hyperzsh.zsh-theme`  
-`vim ~/.zshrc`
+`mkdir $ZSH_CUSTOM/themes` You can skip this command if the directory exists already  
+`wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme`  
+`vim ~/.zshrc`  
 Set `ZSH_THEME="current_theme"` to `ZSH_THEME="hyperzsh"`  
 
 ### For [Zgen](https://github.com/tarjoilija/zgen) users
