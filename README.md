@@ -71,4 +71,4 @@ The right hand prompt displays the current branch, time since last commit, as we
 | `ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL` | White |
 
 ## License
-MIT (c) 2016 - 2017 [Tyler Reckart](https://github.com/tylerreckart)
+MIT [Tyler Reckart](https://github.com/tylerreckart)
