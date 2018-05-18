@@ -7,9 +7,9 @@ PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_c
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 function _user_host() {
-  if [[ -n $SSH_CONNECTION ]]; then
+  if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\) ]]; then
     me="%n@%m"
-  elif [[ $LOGNAME != $USER ]]; then
+  elif [[ logname != $USER ]]; then
     me="%n"
   fi
   if [[ -n $me ]]; then
