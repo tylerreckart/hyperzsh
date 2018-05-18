@@ -1,41 +1,39 @@
 #### H Y P E R Z S H  
-[![Hyperzsh](https://circleci.com/gh/tylerreckart/hyperzsh.svg?style=svg)](https://circleci.com/gh/tylerreckart/hyperzsh)
 
 ![Hyperzsh](screenshots/demo.gif)
 
-Hyperzsh is a [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) shell theme that gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
+Hyperzsh is a [z shell](http://www.zsh.org/) theme designed to complement a git-focused workflow. It gives you a comprehensive overview of the branch you're working on and the status of your repository throughout the development process without cluttering your terminal.  
 
-If currently shows:  
-- Git status
-- Timestamp
-- Current directory
-- [Current SHA](#current_sha)
-- Background jobs
+It currently shows (in order of the prompt):  
+- Current working directory
+- Git branch
+- [Current SHA](#current_sha) (optional)
 - Exit code of last command
+- Time since last commit
+- Git status
+- Background Jobs
 
 ## Installation  
 ### For [antigen](https://github.com/zsh-users/antigen) users
-Add `antigen bundle tylerreckart/hyperzsh` to your `.zshrc`. Antigen will clone and load the hyperzsh repository automaticall the next time you start a zsh session.  
+1. Add `antigen bundle tylerreckart/hyperzsh` to your `.zshrc`. Antigen will clone and load the hyperzsh repository automaticall the next time you start a zsh session.  
 
 ### For [oh-my-zsh](http://ohmyz.sh) users  
 If you're using oh-my-zsh, follow these steps to install hyperzsh:  
-`mkdir $ZSH_CUSTOM/themes` You can skip this command if the directory exists already  
-`wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme`  
-`vim ~/.zshrc`  
-Set `ZSH_THEME="current_theme"` to `ZSH_THEME="hyperzsh"`  
+1. `mkdir $ZSH_CUSTOM/themes` _You can skip this command if the directory exists already_
+2. `wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme`  
+3. `vim ~/.zshrc`  
+4. Set `ZSH_THEME="current_theme"` to `ZSH_THEME="hyperzsh"`  
 
 ### For [Zgen](https://github.com/tarjoilija/zgen) users
-Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen load` statements.  
+1. Add `zgen load tylerreckart/hyperzsh` to your `.zshrc` with your other `zgen load` statements.  
 `zgen save` and zgen will automaticall handle cloning the repository for you.  
 
 ## Options  
-Hyperzsh is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you will. Want to slap some emoji in there? Go for it!
+Hyperzsh is highly configurable. It was build to seamlessly integrate git into my workflow, but my choices may not work for you. Everything from the icons to colors are customizable to whatever you want. Itching to slap some emoji in there? Go for it!
 
-### Show current SHA <a name="current_sha"></a>  
+### Show current SHA <a name="current_sha"></a>   
 
-![SHA Prompt](screenshots/sha_prompt.png)  
-
-If you'd like to view your branch's current SHA, there's already support baked into the theme. All you have to do is edit `hyperzsh.zsh-theme` and comment out the default prompt while uncommenting the prompt that includes the SHA.  
+If you'd like to view your branch's current SHA, there's already support baked into the theme. All you have to do is edit `hyperzsh.zsh-theme` and un-comment the Prompt with SHA and ensure that the default prompt gets commented out or removed.
 
 ```zsh
 # The prompt
@@ -44,6 +42,10 @@ If you'd like to view your branch's current SHA, there's already support baked i
 # Prompt with SHA
 PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(git_prompt_short_sha)%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
 ```
+
+#### Example  
+
+![SHA Prompt](screenshots/sha_prompt.png) 
 
 ### Status Indicators  
 | Variable | Indicator | Meaning |
