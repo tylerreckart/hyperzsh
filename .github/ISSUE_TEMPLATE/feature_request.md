@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Submit a request for a new feature/update to Hyperzsh
 
 ---
 
