@@ -25,7 +25,7 @@ function _python_venv() {
 }
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{%F{yellow}%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
