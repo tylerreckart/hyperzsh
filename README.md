@@ -11,7 +11,6 @@ It currently shows (in order of the prompt):
 - Exit code of last command
 - Time since last commit
 - Git status
-- Background Jobs
 
 ## Installation  
 ### For [antigen](https://github.com/zsh-users/antigen) users
