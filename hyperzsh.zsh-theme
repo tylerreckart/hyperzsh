@@ -1,28 +1,7 @@
-# The prompt
-PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
-
-# Prompt with SHA
-# PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(git_prompt_short_sha)%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ '
+# hyperzsh.zsh-theme
+# git-flavored zsh with configurable prompts
 
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
-
-function _user_host() {
-  if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\) ]]; then
-    me="%n@%m"
-  elif [[ logname != $USER ]]; then
-    me="%n"
-  fi
-  if [[ -n $me ]]; then
-    echo "%{$fg[cyan]%}$me%{$reset_color%}:"
-  fi
-}
-
-# Determine if there is an active Python virtual environment
-function _python_venv() {
-  if [[ $VIRTUAL_ENV != "" ]]; then
-    echo "%{$fg[blue]%}(${VIRTUAL_ENV##*/})%{$reset_color%} "
-  fi
-}
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"
@@ -45,11 +24,10 @@ ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg[red]%}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[white]%}"
 
-#
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
 function _git_time_since_commit() {
-# Only proceed if there is actually a commit.
+  # Only proceed if there is actually a commit.
   if git log -1 > /dev/null 2>&1; then
     # Get the last commit.
     last_commit=$(git log --pretty=format:'%at' -1 2> /dev/null)
@@ -88,3 +66,37 @@ function _git_time_since_commit() {
     echo "$COLOR$commit_age%{$reset_color%}"
   fi
 }
+
+# Return the current user host
+function _user_host() {
+  if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\) ]]; then
+    me="%n@%m"
+  elif [[ logname != $USER ]]; then
+    me="%n"
+  fi
+  if [[ -n $me ]]; then
+    echo "%{$fg[cyan]%}$me%{$reset_color%}:"
+  fi
+}
+
+# Determine if there is an active Python virtual environment
+function _python_venv() {
+  if [[ $VIRTUAL_ENV != "" ]]; then
+    echo "%{$fg[blue]%}(${VIRTUAL_ENV##*/})%{$reset_color%}"
+  fi
+}
+
+EMOJI=( 👻 👽 🐶 🐼 🐷 🐸 🐔 🦄 🥃 🍕 🍔 🌮 )
+
+# Inject a random emoji on each new session.
+function _random_emoji {
+  echo -n "$EMOJI[$RANDOM%$#EMOJI+1]"
+}
+
+# The default prompt.
+function _get_prompt {
+  echo -n "%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(git_prompt_short_sha)%{$fg[magenta]%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}➜ "
+}
+
+# Default Prompt
+PROMPT="$(_get_prompt)"
